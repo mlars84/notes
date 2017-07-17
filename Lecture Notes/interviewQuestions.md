@@ -1,8 +1,7 @@
 ## Using a variable that hasn't been declared with var.  
 -
 
-## What is the DOM?
-- Document Object Model
+          ## What is the DOM?Q               wqutr6      
 -
 
 ## What is encapsulation?
@@ -32,4 +31,4 @@ schemas.
 ## Have you ever used version control?
 - Best practices - branching, not committing to master, avoid merge conflicts
 
-## 
+##
