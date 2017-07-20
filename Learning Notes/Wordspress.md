@@ -1,4 +1,8 @@
-# Wordpress Workshop
+# General WP Notes:
+- 
+
+
+# Chris Black Wordpress Workshop
 Intro to PHP, MySQL and Wordpress. We'll cover the steps required to get a Wordpress install up and running on localhost. After that, we'll walk through the components required to build a custom theme from scratch.
 
 ## Prerequisites
