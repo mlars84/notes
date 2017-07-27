@@ -1,4 +1,6 @@
 # General WP Notes:
+- Beaver Builder for drag and drop editing
+- editing pages, change position overrides to custom
 - 
 
 
