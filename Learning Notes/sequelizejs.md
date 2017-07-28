@@ -27,4 +27,22 @@ sequelize.sync()
   ```Model.findAll({
   attributes: ['foo', 'bar']
 });
+
+SELECT foo, bar ...
+```
+
+- Attributes can be renamed using a nested array:
+```Model.findAll({
+  attributes: ['foo', ['bar', 'baz']]
+});
+
+SELECT foo, bar AS baz ...
+```
+
+- You can use sequelize.fn to do aggregations:
+``` Model.findAll({
+  attributes: [[sequelize.fn('COUNT', sequelize.col('hats')), 'no_hats']]
+});
+
+SELECT COUNT(hats) AS no_hats ...
 ```
