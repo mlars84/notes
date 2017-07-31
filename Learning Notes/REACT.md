@@ -11,6 +11,8 @@ https://medium.com/dailyjs/combining-react-with-socket-io-for-real-time-goodness
 ## Step One - React Documentation + Code Sandbox
 - https://facebook.github.io/react/docs/installation.html
 
+- JSX - syntax extension to JavaScript, produces React "elements"
+
 ## Step Two - React Fundamentals Course
 - https://egghead.io/courses/react-fundamentals
 - https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
@@ -22,4 +24,4 @@ https://medium.com/dailyjs/combining-react-with-socket-io-for-real-time-goodness
 -
 
 ## Step Five -  The Complete Redux Book + Redux Video Series Part 2
-- 
+-
