@@ -11,5 +11,11 @@
 - add "plugins": ["react-relay"] in package.json under "babel": { on line 82
 - $ yarn add react-router@3.0.2
 - create config folder in src and endpoints.js file in config
-  - export const relayApi = 'https://api.graph.cool/relay/v1/cj5zp1w97ckmz0104ybzkya8u';
-- 
+- $ yarn add material-ui
+  - import RaisedButton from 'material-ui/RaisedButton';
+  -   ```<RaisedButton
+        label={'TestButton'}
+        onTouchTap={()=>{console.log('hello, I work') }}
+      />
+      ```
+- $ yarn add react-tap-event-plugin (dependency of material-ui)
