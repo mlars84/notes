@@ -19,3 +19,22 @@
       />
       ```
 - $ yarn add react-tap-event-plugin (dependency of material-ui)
+
+- Planning out dev process
+  - Three categories:
+    - Containers:
+      - Connected to store
+      - Pass data to children
+    - Components:
+      - Manage their own state
+      - Pass props to presentational Components
+    - Presentational:
+      - Don't manage state
+      - Change styling based on props  
+
+- Template Literal
+  - special string that allows you to insert JS into it
+
+- Ternary Operator
+  - allows us to evaluate a true/false statement and then choose between one or two options
+  boolean, what we want to do if it's true, what we want to do if false
