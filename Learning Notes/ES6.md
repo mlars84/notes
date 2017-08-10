@@ -3,7 +3,7 @@
 - arrow functions
 - constructors
 
-## Functional Programming
+## Functional Programming (https://medium.com/javascript-scene/why-learn-functional-programming-in-javascript-composing-software-ea13afc7a257)
 - First class functions: The ability to use functions as data values: pass functions as arguments, return functions, and assign functions to variables and object properties. This property allows for higher order functions, which enable partial application, currying, and composition.
 - Anonymous functions and concise lambda syntax: x => x * 2 is a valid function expression in JavaScript. Concise lambdas make it easier to work with higher-order functions.
 - Closures: A closure is the bundling of a function with its lexical environment. Closures are created at function creation time. When a function is defined inside another function, it has access to the variable bindings in the outer function, even after the outer function exits. Closures are how partial applications get their fixed arguments. A fixed argument is an argument bound in the closure scope of a returned function. In add2(1)(2), 1 is a fixed argument in the function returned by add2(1).
@@ -14,6 +14,26 @@ A const object can't be reassigned to refer to a completely different object, bu
 - Recursion: JavaScript technically supports recursion, but most functional languages have a feature called tail call optimization. Tail call optimization is a feature which allows recursive functions to reuse stack frames for recursive calls.
 Without tail call optimization, a call stack can grow without bounds and cause a stack overflow. JavaScript technically got a limited form of tail call optimization in the ES6 specification. Unfortunately, only one of the major browser engines implemented it, and the optimization was partially implemented and then subsequently removed from Babel (the most popular standard JavaScript compiler, used to compile ES6 to ES5 for use in older browsers).
 - Bottom line: It still isn’t safe to use recursion for large iterations — even if you’re careful to call the function in the tail position.
+
+- A const object can't be reassigned to refer to a completely different object, but the object it refers to can have its properties mutated.
+- While it may not be absolutely ideal for every programmming style, JavaScript is unapologetically a general-purpose language designed to be usable by various people with various programming styles and backgrounds.
+
+## A Functional Programmer’s Introduction to JavaScript (Composing Software)
+(https://medium.com/javascript-scene/a-functional-programmers-introduction-to-javascript-composing-software-d670d14ede30)
+- If you want to assign existing variables to object property keys of the same name, there’s a shortcut for that. You can just type the variable name instead of providing both a key and a value:
+```const a = 'a';
+const oldA = { a: a }; // long, redundant way
+const oA = { a }; // short an sweet!
+```
+- Object Spread Operator (...)
+```const c = {...oA, ...oB}; // { a: 'a', b: 'b' }
+```
+- iterates over the properties in oA and assigns them to the new object, then does the same for oB, overriding any keys that already exist on the new object.
+- In my experience, mutating an existing object rather than creating a new object is usually a bug. At the very least, it is error-prone. Be careful with Object.assign().
+- A ternary expression is an expression that lets you ask a question using a comparator, and evaluates to a different answer depending on whether or not the expression is truthy:
+```14 - 7 === 7 ? 'Yep!' : 'Nope.'; // Yep!
+```
+- 
 
 
 ## Babel for browser compiling
