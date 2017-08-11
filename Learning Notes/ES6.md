@@ -33,10 +33,21 @@ const oA = { a }; // short an sweet!
 - A ternary expression is an expression that lets you ask a question using a comparator, and evaluates to a different answer depending on whether or not the expression is truthy:
 ```14 - 7 === 7 ? 'Yep!' : 'Nope.'; // Yep!
 ```
-- 
+-
 
 
 ## Babel for browser compiling
 - http://ccoenraets.github.io/es6-tutorial/setup-babel/
 - $ npm install babel-cli babel-core --save-dev
 - $ npm install babel-preset-es2015 --save-dev
+
+
+## Object Oriented JavaScript
+- https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/
+
+-  `Classes` give us a convenient syntax to define the state and behavior of objects that will represent our concepts.
+
+- If you can think of something as a separate entity, it’s likely you should define a `class` to represent that “thing” in your program.
+
+### Constructors
+= The `constructor` method is special, and it solves the first problem. Its job is to initialize an instance to a valid state, and it will be called automatically so we can’t forget to initialize our objects.
