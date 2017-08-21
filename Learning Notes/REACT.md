@@ -26,6 +26,60 @@ https://medium.com/dailyjs/combining-react-with-socket-io-for-real-time-goodness
 ## Step Five -  The Complete Redux Book + Redux Video Series Part 2
 -
 
+# Props and State in React
+## `Props`: a way of passing data from parent to child
+```
+Parent = React.createClass({
+  tacos: [ 'Guacamole', 'Rice', 'Bean' ],
+  render() {
+    return <div className="parent-component">
+      <h3>List of tacos:</h3>
+      <TacosList tacos={ this.tacos } />
+    </div>;
+  }
+});
+
+TacosList = React.createClass({
+  render() {
+    return <div className="tacos-list">
+      {this.props.tacos.map( ( taco, index ) => {
+      	return <p key={ `taco-${ index }` }>{ taco }</p>;
+      })}
+    </div>;
+  }
+});
+```
+- ^  two separate `components`: `<Parent />` and `<TacosList />`
+
+- The data we want to pass from our parent to our child is a short list of taco names (the `array` assigned to the tacos property on our `<Parent />` component).
+
+To pass them to the child, we define a property on that child component where that data will be passed through. In this case, we define a property or "prop" in React-slang called tacos on the `<TacosList />` component. Next, using the JSX braces syntax for specifying JavaScript code within our markup, we grab our array of tacos from the parent by calling `this.tacos`. Here, we're literaly saying to the `<TacosList />` component, "here's a list of tacos, go nuts."
+
+## `State`: is best described as how a component's data looks at a given point in time.
+```
+Parent = React.createClass({
+  getInitialState() {
+    return {
+      tacos: [ 'Guacamole', 'Rice', 'Bean' ]
+    };
+  },
+  handleReverse() {
+    this.setState( { tacos: this.state.tacos.reverse() } );
+  },
+  render() {
+    return <div className="parent-component">
+      <h3 onClick={ this.handleReverse }>List of tacos:</h3>
+      <TacosList tacos={ this.state.tacos } />
+    </div>;
+  }
+});
+```
+- the `child` component doesn't care what data it receives as long as it's in the place and format it expects.
+- The `parent` component controls the data, the child just renders it!
+- 
+
+
+
 # create-react-app MD Notes
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
