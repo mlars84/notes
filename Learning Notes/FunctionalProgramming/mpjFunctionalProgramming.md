@@ -1,4 +1,5 @@
 # Functional programming concepts in VanilaJS
+----
 - (https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 - Overview
   - Less bugs: Code will be easier to reason about.
@@ -78,7 +79,9 @@ with filtering at all. We can use it for other things...
 ### `Reject` higher order function that does inverse of `Filter`
 
 # In JS, functions are values and you can exploit this by dividing your code into
-small, simple functions and composing them together using Higher Order Functions.
+# small, simple functions and composing them together using Higher Order Functions.
+
+----
 
 ## `Map()` - Part 2 of Functional Programming in JavaScript :
 [Part 2](https://www.youtube.com/watch?v=bCqtb-Z5YGQ)
@@ -123,7 +126,7 @@ let names = animals.map(function(animal) {
 
 - In functional programming it's common to go even shorter and just shorten the
 variable names to x
-`let names = animals.map((x) => x.name)`
+- `let names = animals.map((x) => x.name)`
 
 ## `Reduce` basics - Part 3 of Functional Programming in JavaScript :
 [Part 3](https://www.youtube.com/watch?v=Wl98eZpkp-c)
