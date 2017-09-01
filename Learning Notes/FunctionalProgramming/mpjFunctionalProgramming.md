@@ -1,4 +1,5 @@
-# Functional programming concepts in VanilaJS(https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
+# Functional programming concepts in VanilaJS
+- (https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 - Overview
   - Less bugs: Code will be easier to reason about.
   - Less time: you can reuse more of your code.
@@ -76,27 +77,68 @@ with filtering at all. We can use it for other things...
 - If we wanted animals that are not dogs, we could use `Reject`
 ### `Reject` higher order function that does inverse of `Filter`
 
-### In JS, functions are values and you can exploit this by dividing your code into
-small, simple functions and composing them together using Higher Order Functions
+# In JS, functions are values and you can exploit this by dividing your code into
+small, simple functions and composing them together using Higher Order Functions.
 
-## Map - Part 2 of Functional Programming in JavaScript :
+## `Map()` - Part 2 of Functional Programming in JavaScript :
 [Part 2](https://www.youtube.com/watch?v=bCqtb-Z5YGQ)
-- 
+- `Map()` is a HOF that goes through array and transforms objects
+```
+let animals = [
+{ name: 'Fluffykins', species: 'rabbit' },
+{ name:'Caro', species:'dog' },
+{ name:'Hamilton', species:'dog' },
+{ name:'Harold', species:'fish' },
+{ name:'Ursula', species:'cat' },
+{ name:'Jimmy', species:'fish' }
+]
+```
+- We want to get an array of all of the names
+- Solved with a `for` loop
+```
+let names = []
+for (let i = 0; i < animals.length; i++) {
+  names.push(animals[i].name)
+}
 
-## Reduce basics - Part 3 of Functional Programming in JavaScript :
+console.log(names)
+```
+- Exact same thing using `map()`
+```
+let names = animals.map(function(animal) {
+  return animal.name
+})
+```
+- Since `map()` just expects the callback to return any object, we can use it to
+create completely new objects
+```
+let names = animals.map(function(animal) {
+  return animal.name + ' is a ' + animal.species
+})
+```
+- Short code is good. Less code almost always means less bugs!!!
+
+### ES6 arrow functions
+`let names = animals.map((animal) => animal.name )`
+
+- In functional programming it's common to go even shorter and just shorten the
+variable names to x
+`let names = animals.map((x) => x.name)`
+
+## `Reduce` basics - Part 3 of Functional Programming in JavaScript :
 [Part 3](https://www.youtube.com/watch?v=Wl98eZpkp-c)
 
-## Reduce Advanced - Part 4 of Functional Programming in JavaScript:
+## `Reduce` Advanced - Part 4 of Functional Programming in JavaScript:
 [Part 4](https://www.youtube.com/watch?v=1DMolJ2FrNY)
 
-## Closures - Part 5 of Functional Programming in JavaScript :
+## `Closures` - Part 5 of Functional Programming in JavaScript :
 [Part 5](https://www.youtube.com/watch?v=CQqwU2Ixu-U)
 
-## Currying - Part 6 of Functional Programming in JavaScript :
+## `Currying` - Part 6 of Functional Programming in JavaScript :
 [Part 6](https://www.youtube.com/watch?v=iZLP4qOwY8I)
 
-## Recursion - Part 7 of Functional Programming in JavaScript :
+## `Recursion` - Part 7 of Functional Programming in JavaScript :
 [Part 7](https://www.youtube.com/watch?v=k7-N8R0-KY4)
 
-## Promises - Part 8 of Functional Programming in JavaScript:
+## `Promises` - Part 8 of Functional Programming in JavaScript:
 [Part 8](https://www.youtube.com/watch?v=2d7s3spWAzo)

@@ -4,16 +4,16 @@ function triple(x) {
 }
 
 //Function as a value
-let triple = function(x) {
-  return x * 3
-}
+// var triple = function(x) {
+//   return x * 3
+// }
 
-let waffle = triple
+var waffle = triple
 
 waffle(30)
 
 //Filter
-let animals = [
+var animals = [
 { name: 'Fluffykins', species: 'rabbit' },
 { name:'Caro', species:'dog' },
 { name:'Hamilton', species:'dog' },
@@ -23,22 +23,41 @@ let animals = [
 ]
 
 //"Filter" through with a normal for loop
-let dogs = []
+var dogs = []
 
-for (let i =0; i < animals.length; i++) {
+for (var i =0; i < animals.length; i++) {
   if (animals[i].species === 'dog')
   dogs.push(animals[i])
 }
 
 //Using `Filter` function
-let dogs = animals.filter(function(animal) {
+var dogs = animals.filter(function(animal) {
   return animal.species === 'dog'
 })
 
 //Breaking out callback into a seperate variables
-let isDog = function(animal) {
+var isDog = function(animal) {
   return animal.species === 'dogs'
 }
 
-let dogs = animals.filter(isDog)
-let otherAnimals = animals.reject(isDog)
+var dogs = animals.filter(isDog)
+// var otherAnimals = animals.reject(isDog)
+
+//Map to transform an array
+var names = []
+for (var i = 0; i < animals.length; i++) {
+  names.push(animals[i].name)
+}
+
+console.log(names)
+
+//using map() and adding to the new objects
+var names = animals.map(function(animal) {
+  return animal.name + ' is a ' + animal.species
+})
+
+console.log('map names =>', names);
+
+//ES6 arrow function with statement implicitly returned
+let es6names = animals.map((animal) => animal.name )
+console.log('es6names =>', es6names)
