@@ -76,6 +76,7 @@ Parent = React.createClass({
 ```
 - the `child` component doesn't care what data it receives as long as it's in the place and format it expects.
 - The `parent` component controls the data, the child just renders it!
+
 - In JavaScript `classes`, you need to explicitly call `super()` when defining the `constructor` of a subclass.
 - Replace `this.props.value` with `this.state.value` inside the <button> tag.
 - Replace the `() => alert()` event handler with `() => this.setState({value: 'X'})`.
@@ -99,7 +100,7 @@ class Square extends React.Component {
 }
 ```
 - Whenever `this.setState` is called, an update to the component is scheduled, causing React to merge in the passed state update and rerender the component along with its descendants.
-- 
+-
 
 
 

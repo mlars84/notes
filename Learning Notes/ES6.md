@@ -3,6 +3,10 @@
 - arrow functions
 - constructors
 
+## React: ES6, ES2016, and Beyond course (Carl Peaslee)
+- 
+
+
 ## Functional Programming (https://medium.com/javascript-scene/why-learn-functional-programming-in-javascript-composing-software-ea13afc7a257)
 - First class functions: The ability to use functions as data values: pass functions as arguments, return functions, and assign functions to variables and object properties. This property allows for higher order functions, which enable partial application, currying, and composition.
 - Anonymous functions and concise lambda syntax: x => x * 2 is a valid function expression in JavaScript. Concise lambdas make it easier to work with higher-order functions.
