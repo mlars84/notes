@@ -61,3 +61,26 @@ console.log('map names =>', names);
 //ES6 arrow function with statement implicitly returned
 let es6names = animals.map((animal) => animal.name )
 console.log('es6names =>', es6names)
+
+
+//Chapter 3
+let orders = [
+  { amount: 250 },
+  { amount: 400 },
+  { amount: 100 },
+  { amount: 325 }
+]
+
+//summarize total of all amounts with for loop
+let totalAmount = 0
+for (var i = 0; i < orders.length; i++) {
+  totalAmount += orders[i].amount
+}
+
+console.log('totalAmount =>', totalAmount)
+
+//Reduce
+let reduceTotalAmount = orders.reduce((sum, order) => sum + order.amount, 0)
+
+console.log('reduceTotalAmount =>', reduceTotalAmount)
+//

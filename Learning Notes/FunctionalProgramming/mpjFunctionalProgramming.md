@@ -128,10 +128,51 @@ let names = animals.map(function(animal) {
 variable names to x
 - `let names = animals.map((x) => x.name)`
 
-## `Reduce` basics - Part 3 of Functional Programming in JavaScript :
-[Part 3](https://www.youtube.com/watch?v=Wl98eZpkp-c)
+# 1 and 2 Recap :
+- `map()`, `filter()`, `reject()` all transform a lit into something else.
+- Another example is `find()` which only returns the first item, transforms an array
+into a single object.
+- All four turn a list into something else.
 
-## `Reduce` Advanced - Part 4 of Functional Programming in JavaScript:
+## `Reduce()` basics - Part 3 of Functional Programming in JavaScript :
+[Part 3](https://www.youtube.com/watch?v=Wl98eZpkp-c)
+- The multitude of list transformations. Super list transformation! Can be used
+if you can't find a pre-built transformation that fits your needs.
+### Want to summarize all the amounts:
+```
+let orders = [
+  { amount: 250 },
+  { amount: 400 },
+  { amount: 100 },
+  { amount: 325 }
+]
+```
+- for loop can do it by looping through all amounts and adding them to a 0 variable
+- let totalAmount
+- just like map() or filter(), reduce() is a function on the array object and just like
+map() and filter(), it takes a callback function. Unlike map() and filter() it wants
+an object.
+- object is a "starting point" for our sum
+```
+let reduceTotalAmount = orders.reduce(function(sum, order) {
+  return sum + order.amount
+}, 0)
+```
+- the object, "sum", is passed as first argument. `Reduce()` also receives the
+iterated item as the second argument.
+- Reduce() iterates through and adds the the first amount to the sum and then begins
+again with the modified sum:
+```
+hello 0 {amount: 250}
+hello 250 {amount: 400}
+hello 650 {amount: 100}
+hello 750 {amount: 325}
+reduceTotalAmount => 1075
+```
+- One Line ES6 version:
+`let reduceTotalAmount = orders.reduce((sum, order) => sum + order.amount, 0)`
+
+## `Reduce()` Advanced - Part 4 of Functional Programming in JavaScript:
 [Part 4](https://www.youtube.com/watch?v=1DMolJ2FrNY)
 
 ## `Closures` - Part 5 of Functional Programming in JavaScript :
