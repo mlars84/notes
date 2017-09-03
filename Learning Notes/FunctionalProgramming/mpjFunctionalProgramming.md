@@ -129,7 +129,7 @@ variable names to x
 - `let names = animals.map((x) => x.name)`
 
 # 1 and 2 Recap :
-- `map()`, `filter()`, `reject()` all transform a lit into something else.
+- `map()`, `filter()`, `reject()` all transform a list into something else.
 - Another example is `find()` which only returns the first item, transforms an array
 into a single object.
 - All four turn a list into something else.
@@ -148,7 +148,6 @@ let orders = [
 ]
 ```
 - for loop can do it by looping through all amounts and adding them to a 0 variable
-- let totalAmount
 - just like map() or filter(), reduce() is a function on the array object and just like
 map() and filter(), it takes a callback function. Unlike map() and filter() it wants
 an object.
@@ -174,6 +173,45 @@ reduceTotalAmount => 1075
 
 ## `Reduce()` Advanced - Part 4 of Functional Programming in JavaScript:
 [Part 4](https://www.youtube.com/watch?v=1DMolJ2FrNY)
+- `Reduce()` is not limited to reducing a list to a number. It can reduce it to anything,
+another array or object.
+- HOF compose very well together.
+### Transforming tab separated file into an object literal:
+```
+mark johansson  waffle iron 80  2
+mark johansson  blender 200 1
+mark johansson  knife 10  4
+Nikita Smith  waffle iron 80  1
+Nikita Smith  knife 10  2
+Nikita Smith  pot 20  3
+```
+```
+import fs from 'fs'
+
+const output = fs.readfileSync('data.txt', 'utf8')
+  .trim() //gets rid of line breaks or spaces at end and start of a string
+  .split('\n') //splits into an array. '\n' is a line break
+  .map(line => line.split('/t')) //map every line and split it on 't' tab characters
+  .reduce((customers, line) => {
+    customers[line[0]] = customers[line[0]] || []
+    customers[line[0]].push({
+      name: line[1],
+      price: line[2],
+      quantity: line[3]
+    })
+    return customers
+  }, {})
+
+  console.log('output', JSON.stringify(output, null, 2))
+  //creates JSON string from the output with two spaces for indentation
+```
+- reduce() takes a function and it takes a starting object. In this case we are going
+to use an empty object as the starting object. First argument is the "customers" object
+that we are constructing or end goal. Second is the thing we are iterating, in this case
+it is a line: `['mark johansson', 'waffle iron', '80', '2'],`
+- reduce() iterates over the array of arrays.
+- Good functional code is made up of small functions that do one thing and you
+bind or chain them together.
 
 ## `Closures` - Part 5 of Functional Programming in JavaScript :
 [Part 5](https://www.youtube.com/watch?v=CQqwU2Ixu-U)

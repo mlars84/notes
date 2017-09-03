@@ -82,5 +82,18 @@ console.log('totalAmount =>', totalAmount)
 //Reduce
 let reduceTotalAmount = orders.reduce((sum, order) => sum + order.amount, 0)
 
+
 console.log('reduceTotalAmount =>', reduceTotalAmount)
-//
+
+//turn data.txt tab separated file into an object literal with reduce()
+import fs from 'fs'
+
+const output = fs.readfileSync('data.txt', 'utf8')
+  .trim()
+  .split('\n')
+  .map(line => line.split('/t'))
+  .reduce((customer, line) => {
+
+  }, {})
+
+console.log(output)

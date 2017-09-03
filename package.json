@@ -1,0 +1,17 @@
+{
+  "name": "Notes",
+  "version": "1.0.0",
+  "description": "Continued Learning notes",
+  "main": "index.js",
+  "repository": "https://github.com/mlars84/notes.git",
+  "author": "Matt Larson <matt.a.larson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
