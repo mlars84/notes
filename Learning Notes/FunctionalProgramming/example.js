@@ -89,11 +89,18 @@ console.log('reduceTotalAmount =>', reduceTotalAmount)
 import fs from 'fs'
 
 const output = fs.readfileSync('data.txt', 'utf8')
-  .trim()
-  .split('\n')
-  .map(line => line.split('/t'))
-  .reduce((customer, line) => {
-
+  .trim() //gets rid of line breaks or spaces at end and start of a string
+  .split('\n') //splits into an array. '\n' is a line break
+  .map(line => line.split('/t')) //map every line and split it on 't' tab characters
+  .reduce((customers, line) => {
+    customers[line[0]] = customers[line[0]] || []
+    customers[line[0]].push({
+      name: line[1],
+      price: line[2],
+      quantity: line[3]
+    })
+    return customers
   }, {})
 
-console.log(output)
+  console.log('output', JSON.stringify(output, null, 2))
+  //creates JSON string from the output with two spaces for indentation
