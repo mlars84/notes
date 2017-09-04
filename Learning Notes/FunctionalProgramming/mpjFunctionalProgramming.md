@@ -215,6 +215,38 @@ bind or chain them together.
 
 ## `Closures` - Part 5 of Functional Programming in JavaScript :
 [Part 5](https://www.youtube.com/watch?v=CQqwU2Ixu-U)
+- In JS functions are not just functions, they are also closures. The function body
+has access to variables that are defined outside the function.
+```
+let me = 'Bruce Wayne'
+
+greetMe = () => {
+  console.log('Hello, ' + me + '!')
+}
+greetMe()
+```
+- `greetMe()` has access to the outer value scope. It does not snapshot the value
+of "me" after it is declared. greetMe() doesn't copy the value, but reads whatever
+the variable is at that time, from the outer scope.
+- Closures have a lot of use cases. Here is one:
+```
+sendRequest = () => {
+  let requestID = '123'
+  $.ajax({
+    url: '/myUrl',
+    success: (res) => {
+      console.log(res);
+      alert('Request ' + requestID + ' returned.')
+    }
+  })
+}
+```
+- All JS functions are closures, including the callback to success, it will have
+access to the requestID, even though the callback is executed way later.
+- Good use is when you start a task and you want to specify something that happens
+when that task is done with stuff that is available to you when you start that task.
+- Many more use cases. Permeates everything in JS.
+[Mozilla Closures Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
 ## `Currying` - Part 6 of Functional Programming in JavaScript :
 [Part 6](https://www.youtube.com/watch?v=iZLP4qOwY8I)

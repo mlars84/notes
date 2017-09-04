@@ -86,21 +86,41 @@ let reduceTotalAmount = orders.reduce((sum, order) => sum + order.amount, 0)
 console.log('reduceTotalAmount =>', reduceTotalAmount)
 
 //turn data.txt tab separated file into an object literal with reduce()
-import fs from 'fs'
+// import fs from 'fs'
 
-const output = fs.readfileSync('data.txt', 'utf8')
-  .trim() //gets rid of line breaks or spaces at end and start of a string
-  .split('\n') //splits into an array. '\n' is a line break
-  .map(line => line.split('/t')) //map every line and split it on 't' tab characters
-  .reduce((customers, line) => {
-    customers[line[0]] = customers[line[0]] || []
-    customers[line[0]].push({
-      name: line[1],
-      price: line[2],
-      quantity: line[3]
-    })
-    return customers
-  }, {})
-
-  console.log('output', JSON.stringify(output, null, 2))
+// const output = fs.readfileSync('data.txt', 'utf8')
+//   .trim() //gets rid of line breaks or spaces at end and start of a string
+//   .split('\n') //splits into an array. '\n' is a line break
+//   .map(line => line.split('/t')) //map every line and split it on 't' tab characters
+//   .reduce((customers, line) => {
+//     customers[line[0]] = customers[line[0]] || []
+//     customers[line[0]].push({
+//       name: line[1],
+//       price: line[2],
+//       quantity: line[3]
+//     })
+//     return customers
+//   }, {})
+//
+//   console.log('output', JSON.stringify(output, null, 2))
   //creates JSON string from the output with two spaces for indentation
+
+  //Closures
+  let me = 'Bruce Wayne'
+
+  greetMe = () => {
+    console.log('Hello, ' + me + '!')
+  }
+  greetMe()
+
+  //closures - sendRequest
+sendRequest = () => {
+  let requestID = '123'
+  $.ajax({
+    url: '/myUrl',
+    success: (res) => {
+      console.log(res);
+      alert('Request ' + requestID + ' returned.')
+    }
+  })
+}
