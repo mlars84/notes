@@ -135,28 +135,28 @@ let dragon = (name, size, element) =>
 console.log(dragon('fluffykins', 'tiny', 'lightning'))
 
 //Same function, but curried
-let curryingDragon =
-  name =
-    size =
-      element =
-        name + ' is a ' +
-        size + ' dragon that breathes ' +
-        element + '!'
-
-console.log(curryingDragon ('fluffykins')('tiny')('lightning'))
+// let curryingDragon =
+//   name =
+//     size =
+//       element =
+//         name + ' is a ' +
+//         size + ' dragon that breathes ' +
+//         element + '!'
+//
+// console.log(curryingDragon ('fluffykins')('tiny')('lightning'))
 
 //Why currying is useful
-let dragons = {
+let dragons = [
   { name: 'fluffykins', element: 'lightning' },
   { name: 'noomi', element: 'lightning' },
   { name: 'karo', element: 'fire' },
   { name: 'doomer', element: 'timewarp' }
-}
+]
 
 let hasElement =
   (element, obj) => obj.element === element
 
 let lightningDragons =
-  dragons,filter(x => hasElement('lightning', x))
+  dragons.filter(x => hasElement('lightning', x))
 
 console.log(lightningDragons)

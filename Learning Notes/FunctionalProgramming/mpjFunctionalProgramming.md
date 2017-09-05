@@ -267,7 +267,6 @@ let curryingDragon =
 console.log(curryingDragon ('fluffykins')('tiny')('lightning'))
 ```
 - Every functional library has a way of making non-curryable functions curryable
-- 
 
 ## `Recursion` - Part 7 of Functional Programming in JavaScript :
 [Part 7](https://www.youtube.com/watch?v=k7-N8R0-KY4)
