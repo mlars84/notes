@@ -250,6 +250,24 @@ when that task is done with stuff that is available to you when you start that t
 
 ## `Currying` - Part 6 of Functional Programming in JavaScript :
 [Part 6](https://www.youtube.com/watch?v=iZLP4qOwY8I)
+- Currying is when a function doesn't take all of it's arguments up front. Instead
+it wants you to give the first argument and then the function returns another function
+which you are supposed to call with the second argument and so on.
+- The idea with currying is that your function can pass through the application
+and gradually recieve the arguments that it needs.
+```
+let curryingDragon =
+  name =
+    size =
+      element =
+        name + ' is a ' +
+        size + ' dragon that breathes ' +
+        element + '!'
+
+console.log(curryingDragon ('fluffykins')('tiny')('lightning'))
+```
+- Every functional library has a way of making non-curryable functions curryable
+- 
 
 ## `Recursion` - Part 7 of Functional Programming in JavaScript :
 [Part 7](https://www.youtube.com/watch?v=k7-N8R0-KY4)
