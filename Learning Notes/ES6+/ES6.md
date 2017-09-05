@@ -3,8 +3,12 @@
 - arrow functions
 - constructors
 
-## React: ES6, ES2016, and Beyond course (Carl Peaslee)
+# Egghead.io Learn ES6 course
+[Course link](https://egghead.io/courses/learn-es6-ecmascript-2015)
 - 
+
+## React: ES6, ES2016, and Beyond course (Carl Peaslee)
+-
 
 
 ## Functional Programming (https://medium.com/javascript-scene/why-learn-functional-programming-in-javascript-composing-software-ea13afc7a257)
