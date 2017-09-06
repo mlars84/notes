@@ -5,7 +5,24 @@
 
 # Egghead.io Learn ES6 course
 [Course link](https://egghead.io/courses/learn-es6-ecmascript-2015)
-- 
+### Arrow Functions:
+- see example.js
+
+### the let keyword
+- `let` allows you to use block scoping.
+```
+let message = 'hi'
+
+{
+  let message = 'bye'
+}
+
+console.log(message)
+```
+- in the above example, message would log out as 'hi'
+- if you're used to bringing your variables up to the top of a scope using var,
+where you wanna be careful of hoisting, you can use let and declare inline in
+blocks and for loops, etc.
 
 ## React: ES6, ES2016, and Beyond course (Carl Peaslee)
 -

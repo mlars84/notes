@@ -39,3 +39,25 @@ let deliverBoy = {
 }
 
 deliverBoy.receive()
+
+//let keyword
+var message = "hi"
+
+{
+  var message = "bye"
+}
+
+console.log('message =>', message)
+
+//array of functions and loop
+const fs = []
+
+for (let i = 0; i < 10; i++) {
+  fs.push(() => {
+    console.log(i)
+  })
+}
+
+fs.forEach((f) => {
+  f()
+})
