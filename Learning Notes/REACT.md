@@ -1,5 +1,17 @@
 # React.js
 
+## Resources list:
+- http://devdocs.io/
+- https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel
+- http://ccoenraets.github.io/es6-tutorial-react/setup/
+- http://wesbos.com/react-for-beginners-updated-and-re-recorded/
+- https://github.com/facebookincubator/create-react-app
+- https://facebook.github.io/react/tutorial/tutorial.html
+- https://www.codecademy.com/learn/react-101
+- https://egghead.io/instructors/dan-abramov
+- https://www.udemy.com/react-redux/learn/v4/content
+- https://www.meetup.com/React-Minneapolis-Meetup/
+
 - npm --global i create-react-app
 - create-react-app APP-NAME
 
