@@ -34,4 +34,13 @@
   - Traditional SEO Rank
     - Underlying assumption: "quality" of a site is proportional to the number of links to it
     - The value of a link on a "quality site" is worth more
-  - 
+  - Long Tail Keywords
+    - "learn javascript" vs "SEO metadata video course"
+    - Keyword phrases which are very, very specific to whatever you are selling
+    - Site visitors are more likely to use when they're closer to a point-of-purchase
+    - [Keyword tracker](https://www.wordtracker.com/)
+    - [semrush](http://semrush.com/)
+    - Use very specific, high intent keywords for content and advertising.
+    - [Google Keyword Planner](https://www.google.com/adwords/?channel=ha&sourceid=awo&subid=us-en-ha-g-aw-c-bk_mv_exa_1!o2-201167645-176465580142-google%20keyword%20planner&gclid=Cj0KEQjwpfzOBRC54uqL1qyPzvQBEiQAU0ccN2iWyrLjy768GauBGNrYx_EHaGHFqvClEDkNH1A_v60aAvCB8P8HAQ&dclid=CKas442h69YCFdFpwQodmjYCUw)
+    - [Google Trends](https://trends.google.com/trends/?geo=BR)
+    - 
